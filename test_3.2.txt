@@ -1,0 +1,17 @@
+/*Write your code here */
+import java.util.Scanner;
+class Pani
+{
+  public static void main(String args[])
+  {
+    Scanner arun=new Scanner(System.in);
+    int N,n;
+    double INR,ti,USD;
+    N=arun.nextInt();
+    INR=arun.nextDouble();
+    n=5*N+5;
+    ti=n*0.50;
+    USD=ti/INR;
+    System.out.println(" "+n+" "+(float)USD);
+  }
+}

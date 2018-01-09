@@ -1,0 +1,46 @@
+/*Write your code here */
+import java.util.Scanner;
+class Prime
+{
+  public static void main(String args[])
+  {
+    Scanner arun = new Scanner(System.in);
+    int N,sum=0,f=0;
+    N=arun.nextInt();
+    if(N==2)
+    {
+      sum=2;
+      System.out.println("Sum of all the prime numbers between 1 to "+N+" is:- "+sum);
+    }
+    else if(N>2)
+    {
+      sum=2;
+      for(int i=1;i<=N;i++)
+      {
+        f=0;
+        for(int j=2;j<i;j++)
+        {
+          if(i%j==0)
+          {
+            f=0;
+            break;
+          }
+          else
+          {
+            f=1;
+          }
+        }
+        if(f==1)
+        {
+          //System.out.println(i);
+          sum=sum+i;
+        }
+      }
+       System.out.println("Sum of all the prime numbers between 1 to "+N+" is:- "+sum);
+    }
+    else
+    {
+      System.out.println("Invalid");
+    }
+  }
+}

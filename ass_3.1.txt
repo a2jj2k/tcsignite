@@ -1,0 +1,26 @@
+/*Write your code here*/
+import java.util.Scanner;
+class Negative
+{
+  public static void main(String args[])
+  {
+    Scanner arun = new Scanner(System.in);
+    int a,b;
+    a=arun.nextInt();
+    b=arun.nextInt();
+    lastDigit(a,b);
+  }
+  static void lastDigit(int a,int b)
+  {
+    int remainder1=a%10;
+    int remainder2=b%10;
+    if(remainder1==remainder2)
+    {
+      System.out.println("true\n");
+    }
+    else
+    {
+      System.out.println("false\n");
+    }
+  }
+}

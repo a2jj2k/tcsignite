@@ -1,0 +1,31 @@
+/*4 Binary Stories*/
+import java.util.*;
+class binary_stories
+	{    
+	public static void main(String[] args)
+		{        
+		Scanner s = new Scanner(System.in);        
+		int num = s.nextInt();        
+		int count = s.nextInt();        
+		String bin = Integer.toString(num,2);        
+		CountNumbers(bin,"1",count);        
+		CountNumbers(bin,"0",count);    
+		}    
+    
+	public static void CountNumbers(String bin, String rep, int num)
+		{        
+		StringBuilder gen = new StringBuilder();        
+		for(int i=0;i<num;i++)
+			{            
+			gen.append(rep);        
+			}        
+			String countz = gen.toString();                
+			int count = 0, index = word.indexOf(countz);        
+			while(index>=0)
+				{            
+				count++;
+			        index = word.indexOf(countz,index+1);        
+				}        
+				System.out.println(count);    
+		}
+	}

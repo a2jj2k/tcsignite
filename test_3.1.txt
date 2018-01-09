@@ -1,0 +1,44 @@
+/*Write your code here*/
+import java.util.Scanner;
+class Count
+{
+  public static void main(String args[])
+  {
+    Scanner arun = new Scanner(System.in);
+    int a,b,c,d;
+    a=arun.nextInt();
+    b=arun.nextInt();
+    c=arun.nextInt();
+    d=not13(a,b,c);
+    System.out.println(d);
+  }
+  public static int not13(int a,int b,int c)
+  {
+    int sum=0;
+    if( (a==13) && (b==13) && (c==13) )
+       {
+         sum=0;
+       }
+       else if(a==13)
+               {
+                 sum=0;
+               }
+               else if(b==13)
+               {
+                 sum=a;
+               }
+    else if(c==13)
+    {
+      sum=a+b;
+    }
+    else
+    {
+      sum=a+b+c;
+    }
+    return sum;
+  }
+}
+    
+         
+  
+  

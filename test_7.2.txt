@@ -1,0 +1,36 @@
+/*Write your code here */
+import java.util.Scanner;
+class Add
+{
+  public static void main(String args[])
+  {
+    Scanner arun = new Scanner(System.in);
+    int sum=0,c,k,n,count=0,d;
+    n=arun.nextInt();
+    int a[] = new int[n];
+    int b[] = new int[n];
+    for(c=0;c<n;c++)
+    {
+      a[c]=arun.nextInt();
+    }
+    for(c=0;c<n;c++)
+    {
+      for(d=0;d<count;d++)
+      {
+        if(a[c]==b[d])
+          break;
+      }
+      if(d==count)
+      {
+        b[count]=a[c];
+        count++;
+      }
+    }
+    for(c=0;c<count;c++)
+    {
+      sum=sum+b[c];
+    }
+    int avg=sum/count;
+    System.out.println(avg);
+  }
+}

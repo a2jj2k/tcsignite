@@ -1,0 +1,36 @@
+/*Write your code here*/
+import java.io.*;
+import java.io.DataInputStream;
+class Slap
+{
+  public static void main(String args[]) throws IOException
+  {
+    String s;
+    int T,k=0;
+    InputStreamReader mac = new InputStreamReader(System.in);
+    BufferedReader ios = new BufferedReader(mac);
+    T=Integer.parseInt(ios.readLine());
+    for(int z=0;z<T;z++)
+    {
+      int flag=1;
+      s=ios.readLine();
+      for(int i=0;i<s.length()-1;i++)
+      {
+        if(s.charAt(i)==s.charAt(i+1))
+        {
+          flag=0;
+          break;
+        }
+      }
+      if(flag==1)
+      {
+        System.out.println("KISS");
+      }
+      else
+      {
+        System.out.println("SLAP");
+      }
+      k++;
+    }
+  }
+}

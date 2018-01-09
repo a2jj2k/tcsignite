@@ -1,0 +1,40 @@
+/*3 The Best Taxi*/
+import java.util.*;
+class bst_tax
+	{    
+	public static void main(String[] args)
+		{        
+		Scanner s = new Scanner(System.in);        
+		int tot_km = s.nextInt(), T = s.nextInt(), min_fare = Integer.MAX_VALUE, tax_no = 0;
+	        double cur_fare = 0;        
+		for(int i=0;i<T;i++)
+			{            
+			int km_total = tot_km;            
+			double init_c = s.nextInt();            
+			double pkm_ch = s.nextInt();            
+			double ipk_ch = init_c/pkm_ch;            
+			int rpk_ch = s.nextInt();            
+			while(pkm_ch!=0)
+				{                
+				cur_fare += ipk_ch;                
+				km_total--;                
+				pkm_ch--;                
+				if(km_total==0)
+					{                    
+					cur_fare = init_c;                    
+					break;                
+					}            
+				}            
+				if(km_total > 0)
+					{                
+					cur_fare += km_total*rpk_ch;            
+					}            
+				if(min_fare>cur_fare)
+					{                
+					min_fare = (int) cur_fare;                
+					tax_no = i+1;            
+					}        
+			}        		
+			System.out.println(tax_no + " " + min_fare);    
+		}
+	}

@@ -1,0 +1,26 @@
+http://stackoverflow.com/questions/19320843/show-hide-text-with-button
+
+http://stackoverflow.com/questions/11154943/how-to-make-the-textview-visible-in-button-click-event-in-android
+
+http://stackoverflow.com/questions/9838838/disable-button-on-click
+
+
+http://stackoverflow.com/questions/11010386/send-bitmap-using-intent-android
+
+
+https://forums.xamarin.com/discussion/14939/is-there-a-way-to-get-bitmap-from-imageview
+
+ANDROID 
+C++ 42
+DBMS 20
+JAVA 282
+MF 24
+MS.NET 51
+TESTING 57
+
+62606335
+ADHARSH29
+
+
+
+JAVA PLACED 95

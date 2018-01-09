@@ -1,0 +1,16 @@
+/*Write your code here */
+import java.util.Scanner;
+class Check
+{
+  public static void main(String args[])
+  {
+    Scanner arun = new Scanner(System.in);
+    int a,b;
+    a=arun.nextInt();
+    b=arun.nextInt();
+    if( (a<0 && b>100) || (a>100 && b<0) )
+      System.out.println("true");
+    else
+      System.out.println("false");
+  }
+}

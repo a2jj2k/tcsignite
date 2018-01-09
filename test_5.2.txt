@@ -1,0 +1,20 @@
+/*Write your code here*/
+import java.util.Scanner;
+class Christmas
+{
+  public static void main(String args[])
+  {
+    Scanner arun = new Scanner(System.in);
+    int x,y,total=111304954;
+    x=(total-8320118)/2;
+    y=total-x;
+    if(x>y)
+    {
+      System.out.println(x+" "+y);
+    }
+    else
+    {
+      System.out.println(y+" "+x);
+    }
+  }
+}

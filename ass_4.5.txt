@@ -1,0 +1,64 @@
+/*Write your code here */
+import java.util.Scanner;
+import java.util.ArrayList;
+class Series
+{
+  public static void main(String args[])
+  {
+    Scanner arun = new Scanner(System.in);
+    int n,a,b,c,f=0,siz,z=0,ctr1=0,ctr2=0;
+    n=arun.nextInt();
+    z=n/3;
+    if(n%3==0)
+    {
+      ArrayList<Integer> arr = new ArrayList<Integer>(n);
+      for(int i=0;i<n;i++)
+      {
+        arr.add(arun.nextInt());
+      }
+      siz=arr.size();
+      do
+      {
+        a=arr.get(0);
+        arr.remove(0);
+        b=arr.get(0);
+        arr.remove(0);
+        c=arr.get(0);
+        arr.remove(0);
+        if( (b>a) && (b%2==0) && (b<c) )
+        {
+          f=1;
+          ctr1++;
+          siz=arr.size();
+        }
+        else if( (b<a) && (b%2!=0) && (b>c) )
+        {
+          f=2;
+          ctr2++;
+          siz=arr.size();
+        }
+        else
+        {
+          //f=3;
+          break;
+        }
+      }while(siz >= 3);
+      if( (f==1) && (ctr1==z))
+      {
+        System.out.println("The above series of length "+n+" is an EVEN series");
+      }
+      else if( (f==2) && (ctr2==z))
+      {
+        System.out.println("The above series of length "+n+" is ODD series");
+      }
+      else
+      {
+        System.out.println("The above series of length "+n+" is a NEITHER series");
+      }
+    }
+    else
+    {
+      System.out.println("The above series of length "+n+" is a NEITHER series");
+    }
+  }
+}

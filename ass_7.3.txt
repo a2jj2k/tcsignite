@@ -1,0 +1,49 @@
+/*Write your code here */
+import java.util.Scanner;
+class Slar
+{
+  public static void main(String args[])
+  {
+    Scanner arun = new Scanner(System.in);
+    int n,check=0,largest=0,slargest=0;
+    n=arun.nextInt();
+    int arr[] = new int[n];
+    for(int i=0;i<n;i++)
+    {
+      arr[i]=arun.nextInt();
+    }
+    for(int i=1;i<n;i++)
+    {
+      if(arr[i]!=arr[0])
+      {
+        check=1;
+      }
+      else
+      {
+        check=0;
+      }
+    }
+    if(check==1)
+    {
+      largest=arr[0];
+      slargest=arr[0];
+      for(int i=0;i<arr.length;i++)
+      {
+        if(arr[i]>largest)
+        {
+          slargest=largest;
+          largest=arr[i];
+        }
+        else if(arr[i]>slargest)
+        {
+          slargest=arr[i];
+        }
+      }
+      System.out.println(slargest);
+    }
+    else
+    {
+      System.out.println("-1");
+    }
+  }
+}

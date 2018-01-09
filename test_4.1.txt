@@ -1,0 +1,27 @@
+/*Write your code here*/
+import java.util.Scanner;
+class Coin
+{
+  public static void main(String args[])
+  {
+    Scanner arun = new Scanner(System.in);
+    int totalcoin=0,totalnote=0,total=0,a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0;
+    int arr[] = new int[8];
+    for(int i=0;i<8;i++)
+    {
+      arr[i]=arun.nextInt();
+    }
+    a=arr[0]*1;
+    b=arr[1]*2;
+    c=arr[2]*5;
+    d=arr[3]*10;
+    e=arr[4]*20;
+    f=arr[5]*50;
+    g=arr[6]*100;
+    h=arr[7]*1000;
+    totalcoin=a+b+c;
+    totalnote=d+e+f+g+h;
+    total=totalcoin+totalnote;
+    System.out.println("Rs. "+totalcoin+" in coins, Rs. "+totalnote+" in notes, Rs. "+total+" in total.");
+  }
+}

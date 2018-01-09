@@ -1,0 +1,35 @@
+/*Write your code here*/
+import java.util.Scanner;
+class tollBooth
+{
+ public int totalcars,totalmoney;
+}
+class Test
+{
+  public static void main(String args[])
+  {
+    int payed=0,unpayed=0,ch;
+    tollBooth ob = new tollBooth();
+    Scanner arun=new Scanner(System.in);
+    do
+    {
+      ch=arun.nextInt();
+      if(ch==1)
+      {
+        payed++;
+      }
+      else if(ch==2)
+      {
+        unpayed++;
+      }
+      else
+      {
+        ob.totalcars=payed+unpayed;
+        ob.totalmoney=payed*50;
+        System.out.println(ob.totalcars+"\n"+payed+"\n"+unpayed+"\n"+ob.totalmoney);
+        return;
+      }
+    }while(ch!=1 || ch!=2);
+  }
+}
+        
