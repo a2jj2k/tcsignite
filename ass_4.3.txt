@@ -1,0 +1,26 @@
+/*Write your code here */
+import java.util.Scanner;
+class Fact
+{
+  public static void main(String args[])
+  {
+   Scanner arun = new Scanner(System.in);
+    int num;
+    num=arun.nextInt();
+    System.out.println(factorial(num));
+  }
+  static String factorial(int num)
+  {
+    if(num<0)
+    {
+      return "Invalid Input";
+    }
+    else
+    {
+      int fact=1;
+      for(int i=1;i<=num;i++)
+        fact=fact*i;
+      return String.valueOf(fact);
+    }
+  }
+}

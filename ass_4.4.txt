@@ -1,0 +1,21 @@
+/*Write your code here */
+import java.util.Scanner;
+import java.text.DecimalFormat;
+//import java.text.setMaximumfractionString;
+class Num
+{
+  public static void main(String args[])
+  {
+    Scanner arun = new Scanner(System.in);
+    DecimalFormat df = new DecimalFormat();
+    df.setMaximumFractionDigits(4);
+    df.setMinimumFractionDigits(4);
+    //int a,b,c;
+    double a,b,c,d;
+    a=arun.nextDouble();
+    b=arun.nextDouble();
+    c=arun.nextDouble();
+    d=a*((b+c)/(c-a));
+    System.out.print(df.format(d));
+  }
+}

@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class Sum
+{
+  public static void main(String args[])
+  {
+    Scanner scan = new Scanner(System.in);
+    int N,os,es,i;
+    os=0;
+    es=0;
+    N=scan.nextInt();
+    if (N<1)
+    {
+      System.out.println("Invalid input");
+    }
+    else
+    {
+    for(i=1;i<=N;i++)
+    {
+      if(i%2==0)
+        es=es+i;
+      else
+        os=os+i;
+    }
+    System.out.println("Sum of EVEN Numbers:- "+es);
+    System.out.println("Sum of ODD Numbers:- "+os);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+/*1 Employees Database*/
+import java.util.*;
+class employees_count
+	{    
+	public static void main(String[] args)
+		{        
+		Scanner s = new Scanner(System.in);
+		ArrayList<String> a_emps = new ArrayList<String>();        
+		ArrayList<String> c_emps = new ArrayList<String>();        
+		while(true)
+			{            
+			String str = s.next();            
+			if(str.charAt(0)=='+')
+				{                
+				str = str.replace("+","");                
+				if(!c_emps.contains(str))
+					{                    
+					c_emps.add(str);                
+					}                
+				if(!a_emps.contains(str))
+					{                    
+					a_emps.add(str);                
+					}            
+				}
+			else if(str.charAt(0)=='-')
+				{                
+				str = str.replace("-","");                
+				if(c_emps.contains(str))
+					{                    
+					c_emps.remove(str);                
+					}            
+				}
+			else if(str.charAt(0)=='0')
+				{                
+				break;            
+				}
+        		}
+		        System.out.println(a_emps.size()+"\n"+c_emps.size()+"\n"+c_emps.toString().replace("[","").replace("]","").replace(", ","\n"));    
+		}
+	}

@@ -1,0 +1,21 @@
+/*5 Vinod and his KFC order*/
+import java.util.*;
+class vinod_at_kfc
+	{    
+	public static void main(String[] args)
+		{        
+		Scanner s = new Scanner(System.in);        
+		double total = 0;        
+		int T = 5, gums = 0;        
+		while(T-->0)
+			{            
+			total += s.nextDouble();        
+			}        
+			total += total*0.10;        			total = Math.ceil(total);        
+			while(total%10!=0)
+				{            
+				total++;            
+				gums++;        				}        
+				System.out.println(gums);
+		}
+	}

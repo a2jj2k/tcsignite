@@ -1,0 +1,35 @@
+/*2 Strange Number Range*/
+import java.util.*;
+class strange_num
+	{    
+	public static void main(String[] args)
+		{        
+		Scanner s = new Scanner(System.in);        
+		int st = s.nextInt();        
+		int en = s.nextInt();        
+		StringBuilder sb = new StringBuilder("Strange numbers between "+st+" and "+en+" are: ");        
+		if(st<en)
+			{            
+			for(int i=st;i<en;i++)
+				{                
+				int sq = num*num;                
+				int num = i;                
+				String sq_s = sq+"";                
+				int tot = sq;                
+				if(sq_s.length()>1)
+					{                    
+					tot = Integer.parseInt(sq_s.substring(0,sq_s.length()/2)) + Integer.parseInt(sq_s.substring(sq_s.length()/2,sq_s.length()));                				}                
+				if(tot==i)
+					{                    
+					sb.append(tot+",");                
+					}            
+				}            
+				sb.deleteCharAt(sb.length()-1);            
+				System.out.println(sb);        
+			}
+		else
+			{            
+			System.out.println("Invalid Input");        
+			}    
+		}
+	}

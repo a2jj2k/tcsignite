@@ -1,0 +1,54 @@
+/*Write your code here */
+import java.util.Scanner;
+class Mirror
+{
+  public static void main(String args[])
+  {
+    Scanner arun = new Scanner(System.in);
+    int n,num,temp1=0,temp2=0,x=0,r=0,check=0,flag=0;
+    n=arun.nextInt();
+    for(int i=0;i<n;i++)
+    {
+      num=arun.nextInt();
+      temp1=num;temp2=num;
+      check=1;
+      /*while(num>0)
+      {
+        x=num%10;
+        r=r*10+x;
+        num=num/10;
+      }
+      if(temp1==r)
+      {
+        check=1;
+      }*/
+      if(check==1)
+      {
+        while(temp2>0)
+        {
+          x=temp2%10;
+          if( x==2 || x==3 || x==4 || x==5 || x==6 || x==7 || x==9 )
+          {
+            flag=1;
+            break;
+          }
+          temp2=temp2/10;
+        }
+        if(flag==1)
+        {
+          System.out.println("NO");
+        }
+        else
+        {
+          System.out.println("YES");
+        }
+      }
+        else
+        {
+          System.out.println("NO");
+        }
+        flag=0;
+        check=0;
+      } 
+    }
+  }
